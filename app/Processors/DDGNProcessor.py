@@ -8,15 +8,16 @@ class DDGNProcessor():
 
         gamma = .9,  # discount factor
         tau = 100  # target network update frequency
-        architecture = (256,256)  # units per layer
+        architecture = (50,50,50,50)  # units per layer
         learning_rate = 0.0001  # learning rate
         l2_reg = 1e-6  # L2 regularization
         replay_capacity = int(1e6)
-        batch_size = 4096
+        batch_size = 500
         epsilon_start = 1.0
         epsilon_end = .01
         epsilon_decay_steps = 250
         epsilon_exponential_decay = .99
+
 
         self.num_actions = 3
         self.state_dim   = 165
